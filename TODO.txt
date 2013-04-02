@@ -1,0 +1,21 @@
+Figure out how go works
+Jinja2
+
+
+DB structs:
+	Post:
+		subject: string
+		constent: text
+		created: DateTime [auto_now_new]
+		lastmod: DateTime [auto_now]
+
+	User:
+		name: string
+		hsp: string
+
+Pages:
+	front: last 10 post
+	permalink: single post
+	login: simple login
+	post: simple post generation
+
