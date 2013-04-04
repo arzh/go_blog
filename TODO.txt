@@ -1,13 +1,15 @@
+Create base app
+
 Figure out how go works
 Jinja2
 
 
 DB structs:
-	Post:
-		subject: string
-		constent: text
-		created: DateTime [auto_now_new]
-		lastmod: DateTime [auto_now]
+X	Post:
+X		subject: string
+X		constent: text
+X		created: DateTime [auto_now_new]
+X		lastmod: DateTime [auto_now]
 
 	User:
 		name: string
