@@ -7,11 +7,11 @@ import (
 	//"appengine"
 	//"appengine/datastore"
 
-	"templates"
+	"pages"
 )
 
 func init() {
-	_ = templates.InitPages()
+	pages.Init()
 	http.HandleFunc("/", dbTester)
 }
 
@@ -30,7 +30,7 @@ func dbTester(w http.ResponseWriter, r *http.Request) {
 
 	posts := initData()
 
-	err := templates.Pages["front"].Execute(w, posts)
+	err := pages.Map["front"].Execute(w, posts)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
