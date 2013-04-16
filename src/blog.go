@@ -12,7 +12,8 @@ import (
 
 func init() {
 	pages.Init()
-	http.HandleFunc("/", dbTester)
+	http.HandleFunc("/", frontPage)
+	//http.HandleFunc("/perma/([a-z+])", postPage)
 }
 
 func initData() []Post {
@@ -24,7 +25,7 @@ func initData() []Post {
 	return []Post{post, post2}
 }
 
-func dbTester(w http.ResponseWriter, r *http.Request) {
+func frontPage(w http.ResponseWriter, r *http.Request) {
 	//context := appengine.NewContext(r)
 	//InitPages()
 
