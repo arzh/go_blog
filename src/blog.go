@@ -13,6 +13,7 @@ import (
 func init() {
 	pages.Init()
 	http.HandleFunc("/", frontPage)
+	http.HandleFunc("/new", NewpostHandler)
 	//http.HandleFunc("/perma/([a-z+])", postPage)
 }
 

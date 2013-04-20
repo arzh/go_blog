@@ -15,5 +15,5 @@ func Init() {
 	Map = make(map[string]*template.Template)
 
 	Map["front"] = template.Must(template.ParseFiles(p("base.html"), p("front.html"), p("post.html")))
-
+	Map["newpost"] = template.Must(template.ParseFiles(p("base.html"), p("newpost.html")))
 }
