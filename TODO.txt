@@ -1,20 +1,19 @@
 DB structs:
-X	Post:
-X		subject: string
-X		constent: text
-X		created: DateTime [auto_now_new]
-X		lastmod: DateTime [auto_now]
+[X]	Post:
+[X]		subject: string
+[X]		constent: text
+[X]		created: DateTime [auto_now_new]
+[X]		lastmod: DateTime [auto_now]
 
 	User:
 		name: string
 		hsp: string
 
 Pages:
-	front: last 10 post
-	permalink: single post
+[X]	front: last 10 post
+[X]	permalink: single post
 	login: simple login
-	post: simple post generation
+[X]	post: simple post generation
 
-Break out all DB work into new package postDB
-rename Post to postDB.Entity
-add postDB.Ancester
+[X]Break out all DB work into new package postDB
+[X]rename Post to postDB.Entity

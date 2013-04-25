@@ -16,4 +16,5 @@ func Init() {
 
 	Map["front"] = template.Must(template.ParseFiles(p("base.html"), p("front.html"), p("post.html")))
 	Map["newpost"] = template.Must(template.ParseFiles(p("base.html"), p("newpost.html")))
+	Map["permalink"] = template.Must(template.ParseFiles(p("base.html"), p("permalink.html"), p("post.html")))
 }

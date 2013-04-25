@@ -2,8 +2,9 @@ package blog
 
 import (
 	"pages"
+	"DB/Posts"
+	"appengine"
 	"net/http"
-	"fmt"
 )
 
 type PageDef struct {
@@ -52,9 +53,9 @@ func NewpostHandler(w http.ResponseWriter, r *http.Request) {
 		if hasError {
 			render_page(w, pageState)
 		} else {
-			//Build post db
-			//put post
-			fmt.Fprintf(w, "Good Post!")
+			p := posts.New(pageState.Title, pageState.Text)
+			p.Put(appengine.NewContext(r))
+			http.Redirect(w, r, "/", http.StatusMovedPermanently)
 		}
 
 	}
